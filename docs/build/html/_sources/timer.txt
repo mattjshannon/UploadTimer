@@ -1,13 +1,13 @@
-src package
-===========
+timer package
+=============
 
 Submodules
 ----------
 
-src\.timer module
------------------
+timer.timer module
+------------------
 
-.. automodule:: src.timer
+.. automodule:: timer.timer
     :members:
     :undoc-members:
     :show-inheritance:
@@ -16,7 +16,7 @@ src\.timer module
 Module contents
 ---------------
 
-.. automodule:: src
+.. automodule:: timer
     :members:
     :undoc-members:
     :show-inheritance:

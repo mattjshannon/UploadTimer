@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>timer package &mdash; UploadTimer 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="UploadTimer 0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">UploadTimer 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="timer-package">
+<h1>timer package<a class="headerlink" href="#timer-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-timer.timer">
+<span id="timer-timer-module"></span><h2>timer.timer module<a class="headerlink" href="#module-timer.timer" title="Permalink to this headline">¶</a></h2>
+<p>Track and predict how long an Amazon Cloud upload is going to take.</p>
+<dl class="class">
+<dt id="timer.timer.TimeIt">
+<em class="property">class </em><tt class="descclassname">timer.timer.</tt><tt class="descname">TimeIt</tt><big>(</big><em>nfiles=100</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Create a time-tracking object.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><p class="first">upload_data (list): Measurements of file number uploads.
+time_data (list): Measurements of the current system time when</p>
+<blockquote>
+<div>each upload measurement was taken.</div></blockquote>
+<p class="last">nfiles (int): The total number of files to be uploaded.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="timer.timer.TimeIt.add_to_dataset">
+<tt class="descname">add_to_dataset</tt><big>(</big><em>file_number=None</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.add_to_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.add_to_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record a measurement of current file being uploaded and a timestamp.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>True if successful, False otherwise.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="timer.timer.TimeIt.plot_it">
+<tt class="descname">plot_it</tt><big>(</big><em>poly=2</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.plot_it"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.plot_it" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot data and estimated upload completion time.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>poly (int): Degree of polynomial for fit.
+<a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs: Keyword arguments for matplotlib.pyplot.axes.plot.</dd>
+<dt>Returns:</dt>
+<dd>True if successful, False otherwise.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="timer.timer.TimeIt.read_time_data">
+<tt class="descname">read_time_data</tt><big>(</big><em>init=0</em>, <em>file_path='data/timestamps.txt'</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.read_time_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.read_time_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list that holds the timestamps.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first docutils">
+<dt>init (int): Flag for whether to start from scratch and ignore any</dt>
+<dd>saved previous measurements (set True if desired).</dd>
+</dl>
+<p class="last">file_path (str): Path for the timestamps file.</p>
+</dd>
+<dt>Returns:</dt>
+<dd>time_data (list): List for holding upload data measurements.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="timer.timer.TimeIt.read_upload_data">
+<tt class="descname">read_upload_data</tt><big>(</big><em>init=0</em>, <em>file_path='data/uploads.txt'</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.read_upload_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.read_upload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list that holds the number of files being uploaded.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first docutils">
+<dt>init (int): Flag for whether to start from scratch and ignore any</dt>
+<dd>saved previous measurements (set True if desired).</dd>
+</dl>
+<p class="last">file_path (str): Path for the uploads file.</p>
+</dd>
+<dt>Returns:</dt>
+<dd>upload_data (list): List for holding upload data measurements.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="timer.timer.TimeIt.time_data_to_dec">
+<tt class="descname">time_data_to_dec</tt><big>(</big><em>time_data</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.time_data_to_dec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.time_data_to_dec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retreive the timestamps, including a decimal version for calculations.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>time_data_dec (numpy.ndarray): Floats of seconds since start of</dt>
+<dd>epoch.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="timer.timer.TimeIt.write_time_data">
+<tt class="descname">write_time_data</tt><big>(</big><em>file_path='data/timestamps.txt'</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.write_time_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.write_time_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the timestamps to a file.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>file_path (str): Path for the timestamps file.</dd>
+<dt>Returns:</dt>
+<dd>True if successful, False otherwise.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="timer.timer.TimeIt.write_upload_data">
+<tt class="descname">write_upload_data</tt><big>(</big><em>file_path='data/uploads.txt'</em><big>)</big><a class="reference internal" href="_modules/timer/timer.html#TimeIt.write_upload_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#timer.timer.TimeIt.write_upload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the upload data to a file.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>file_path (str): Path for the uploads file.</dd>
+<dt>Returns:</dt>
+<dd>True if successful, False otherwise.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-timer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-timer" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">timer package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-timer.timer">timer.timer module</a></li>
+<li><a class="reference internal" href="#module-timer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/timer.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">UploadTimer 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2017, Matthew J. Shannon.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+    </div>
+  </body>
+</html>

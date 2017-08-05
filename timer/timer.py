@@ -8,7 +8,7 @@ import os.path
 
 from datetime import datetime
 from scipy import stats
-from ipdb import set_trace as st
+# from ipdb import set_trace as st
 
 class TimeIt(object):
     """Create a time-tracking object.
