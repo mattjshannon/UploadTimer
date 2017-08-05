@@ -16,17 +16,19 @@
 import sys
 import os
 
-from unittest.mock import MagicMock
-# from mock import Mock as MagicMock
+# try:
+#     from unittest.mock import MagicMock
+# except ImportError:
+#     from mock import Mock as MagicMock
 
-class Mock(MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-            return MagicMock()
+# class Mock(MagicMock):
+#     @classmethod
+#     def __getattr__(cls, name):
+#             return MagicMock()
 
-MOCK_MODULES = ['numpy', 'matplotlib', 'matplotlib.pyplot',
-                'matplotlib.dates', 'pytz', 'datetime', 'scipy']
-sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+# MOCK_MODULES = ['numpy', 'matplotlib', 'matplotlib.pyplot',
+#                 'matplotlib.dates', 'pytz', 'datetime', 'scipy']
+# sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -45,8 +47,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
     'sphinx.ext.pngmath',
-    'sphinx.ext.viewcode',
-]
+    'sphinx.ext.viewcode']
+    # 'sphinx.ext.napoleon']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
