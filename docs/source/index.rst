@@ -10,7 +10,6 @@ Welcome to UploadTimer's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
    timer
 
 Indices and tables
