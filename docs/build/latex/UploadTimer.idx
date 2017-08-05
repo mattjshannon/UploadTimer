@@ -1,0 +1,13 @@
+\indexentry{src.timer (module)|hyperpage}{1}
+\indexentry{TimeIt (class in src.timer)|hyperpage}{1}
+\indexentry{upload\_data (src.timer.TimeIt attribute)|hyperpage}{1}
+\indexentry{time\_data (src.timer.TimeIt attribute)|hyperpage}{1}
+\indexentry{nfiles (src.timer.TimeIt attribute)|hyperpage}{1}
+\indexentry{add\_to\_dataset() (src.timer.TimeIt method)|hyperpage}{1}
+\indexentry{plot\_it() (src.timer.TimeIt method)|hyperpage}{1}
+\indexentry{read\_time\_data() (src.timer.TimeIt method)|hyperpage}{1}
+\indexentry{read\_upload\_data() (src.timer.TimeIt method)|hyperpage}{2}
+\indexentry{time\_data\_to\_dec() (src.timer.TimeIt method)|hyperpage}{2}
+\indexentry{write\_time\_data() (src.timer.TimeIt method)|hyperpage}{2}
+\indexentry{write\_upload\_data() (src.timer.TimeIt method)|hyperpage}{2}
+\indexentry{src (module)|hyperpage}{2}
