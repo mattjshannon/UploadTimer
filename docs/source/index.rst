@@ -10,7 +10,7 @@ Welcome to UploadTimer's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   src
+   modules
 
 
 
