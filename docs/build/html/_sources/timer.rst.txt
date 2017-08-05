@@ -4,8 +4,8 @@ timer package
 Submodules
 ----------
 
-timer.timer module
-------------------
+timer\.timer module
+-------------------
 
 .. automodule:: timer.timer
     :members:
