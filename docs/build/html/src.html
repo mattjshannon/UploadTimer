@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src package &mdash; UploadTimer 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="UploadTimer 0.1 documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to UploadTimer’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UploadTimer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">src package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.timer">src.timer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UploadTimer</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>src package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/src.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-package">
+<h1>src package<a class="headerlink" href="#src-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.timer">
+<span id="src-timer-module"></span><h2>src.timer module<a class="headerlink" href="#module-src.timer" title="Permalink to this headline">¶</a></h2>
+<p>Track and predict how long an Amazon Cloud upload is going to take.</p>
+<dl class="class">
+<dt id="src.timer.TimeIt">
+<em class="property">class </em><code class="descclassname">src.timer.</code><code class="descname">TimeIt</code><span class="sig-paren">(</span><em>nfiles=100</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Create a time-tracking object.</p>
+<dl class="attribute">
+<dt id="src.timer.TimeIt.upload_data">
+<code class="descname">upload_data</code><a class="headerlink" href="#src.timer.TimeIt.upload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list</em> – Measurements of file number uploads.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.timer.TimeIt.time_data">
+<code class="descname">time_data</code><a class="headerlink" href="#src.timer.TimeIt.time_data" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list</em> – Measurements of the current system time when
+each upload measurement was taken.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.timer.TimeIt.nfiles">
+<code class="descname">nfiles</code><a class="headerlink" href="#src.timer.TimeIt.nfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> – The total number of files to be uploaded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.add_to_dataset">
+<code class="descname">add_to_dataset</code><span class="sig-paren">(</span><em>file_number=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.add_to_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.add_to_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record a measurement of current file being uploaded and a timestamp.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if successful, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.plot_it">
+<code class="descname">plot_it</code><span class="sig-paren">(</span><em>poly=2</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.plot_it"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.plot_it" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot data and estimated upload completion time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>poly</strong> (<em>int</em>) – Degree of polynomial for fit.</li>
+<li><strong>**kwargs</strong> – Keyword arguments for matplotlib.pyplot.axes.plot.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if successful, False otherwise.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.read_time_data">
+<code class="descname">read_time_data</code><span class="sig-paren">(</span><em>init=0</em>, <em>file_path='data/timestamps.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.read_time_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.read_time_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list that holds the timestamps.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>init</strong> (<em>int</em>) – Flag for whether to start from scratch and ignore any
+saved previous measurements (set True if desired).</li>
+<li><strong>file_path</strong> (<em>str</em>) – Path for the timestamps file.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List for holding upload data measurements.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#src.timer.TimeIt.time_data" title="src.timer.TimeIt.time_data">time_data</a> (list)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.read_upload_data">
+<code class="descname">read_upload_data</code><span class="sig-paren">(</span><em>init=0</em>, <em>file_path='data/uploads.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.read_upload_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.read_upload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list that holds the number of files being uploaded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>init</strong> (<em>int</em>) – Flag for whether to start from scratch and ignore any
+saved previous measurements (set True if desired).</li>
+<li><strong>file_path</strong> (<em>str</em>) – Path for the uploads file.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">List for holding upload data measurements.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#src.timer.TimeIt.upload_data" title="src.timer.TimeIt.upload_data">upload_data</a> (list)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.time_data_to_dec">
+<code class="descname">time_data_to_dec</code><span class="sig-paren">(</span><em>time_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.time_data_to_dec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.time_data_to_dec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retreive the timestamps, including a decimal version for calculations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>Floats of seconds since start of</dt>
+<dd>epoch.</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">time_data_dec (numpy.ndarray)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.write_time_data">
+<code class="descname">write_time_data</code><span class="sig-paren">(</span><em>file_path='data/timestamps.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.write_time_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.write_time_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the timestamps to a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>str</em>) – Path for the timestamps file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if successful, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.timer.TimeIt.write_upload_data">
+<code class="descname">write_upload_data</code><span class="sig-paren">(</span><em>file_path='data/uploads.txt'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/timer.html#TimeIt.write_upload_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.timer.TimeIt.write_upload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the upload data to a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>str</em>) – Path for the uploads file.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if successful, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to UploadTimer’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Matthew J. Shannon.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
