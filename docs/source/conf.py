@@ -31,7 +31,7 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
             return MagicMock()
 
-MOCK_MODULES = ['matplotlib', 'matplotlib.pyplot', 'numpy', 'pytz', 'timedate', 'scipy']
+MOCK_MODULES = ['matplotlib', 'matplotlib.pyplot', 'matplotlib.dates', 'numpy', 'pytz', 'timedate', 'scipy']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 
