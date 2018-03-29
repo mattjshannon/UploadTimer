@@ -2,5 +2,5 @@
     <img src='https://readthedocs.org/projects/uploadtimer/badge/?version=latest' alt='Documentation Status' />
 </a>
 
-# UploadTimer
+# Upload timer
 Estimate time of completion for uploading files to Amazon Cloud.
